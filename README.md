@@ -47,7 +47,7 @@ ecommerce-behavior-operations-analytics/
 │   └── customer_shopping_behavior.csv   # Raw dataset
 │
 ├── notebooks/
-│   └── Customer_Shopping_Behavior_Analysis.ipynb      # Python data cleaning & SQL upload workflow
+│   └── Customer_Shopping_Behavior_Analysis.ipynb # Python data cleaning & SQL workflow
 │
 ├── LICENSE
 └── README.md
