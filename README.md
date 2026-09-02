@@ -51,9 +51,12 @@ ecommerce-behavior-operations-analytics/
 │
 ├── LICENSE
 └── README.md
-Key T-SQL Query Examples
-Vendor Quality Risk Identification
-SQL
+
+
+## Key T-SQL Query Examples
+
+### Vendor Quality Risk Identification
+```sql
 SELECT 
     item_purchased,
     color,
@@ -63,8 +66,9 @@ FROM dbo.customer
 GROUP BY item_purchased, color
 HAVING AVG(review_rating) < 3.5
 ORDER BY avg_rating ASC;
-Size-Color Inventory Matrix (Clothing Category)
-SQL
+
+### Size-Color Inventory Matrix (Clothing Category)
+```sql
 SELECT TOP 5 
     size, 
     color, 
@@ -73,18 +77,18 @@ FROM dbo.customer
 WHERE category = 'Clothing'
 GROUP BY color, size
 ORDER BY total_purchased DESC;
-Interactive Dashboard Features
-Vendor Quality Risk Panel: Table visualization with conditional formatting highlighting items rated below 3.5 stars.
 
-Top Clothing SKUs Heatmap: Matrix grid evaluating Size x Color sales volume for inventory planning.
+## Interactive Dashboard Features
+* **Vendor Quality Risk Panel:** Table visualization with conditional formatting highlighting items rated below 3.5 stars.
+* **Top Clothing SKUs Heatmap:** Matrix grid evaluating `Size` x `Color` sales volume for inventory planning.
+* **Executive Overview:** High-level KPI cards tracking total revenue, average spend ($59.76), and average rating (3.75).
 
-Executive Overview: High-level KPI cards tracking total revenue, average spend ($59.76), and average rating (3.75).
+---
 
-Setup & How to Run
-Clone the repository:
+## Setup & How to Run
 
-Bash
-git clone [https://github.com/harshitajawaharmalani/ecommerce-behavior-operations-analytics.git](https://github.com/harshitajawaharmalani/ecommerce-behavior-operations-analytics.git)
-Database Setup: Run sql/customer_behavior_analysis.sql in MS SQL Server Management Studio (SSMS).
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/harshitajawaharmalani/ecommerce-behavior-operations-analytics.git](https://github.com/harshitajawaharmalani/ecommerce-behavior-operations-analytics.git)
 
-Power BI Dashboard: Open dashboards/customer_behavior_dashboard.pbix in Power BI Desktop and update your local SQL Server data source connection.
+Power BI Dashboard: Open powerbi/customer_behavior_dashboard.pbix in Power BI Desktop and update your local SQL Server data source connection.
