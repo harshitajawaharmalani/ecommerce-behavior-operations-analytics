@@ -51,6 +51,7 @@ ecommerce-behavior-operations-analytics/
 │
 ├── LICENSE
 └── README.md
+```
 
 
 ## Key T-SQL Query Examples
