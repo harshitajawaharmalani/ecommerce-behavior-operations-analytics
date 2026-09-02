@@ -67,6 +67,7 @@ FROM dbo.customer
 GROUP BY item_purchased, color
 HAVING AVG(review_rating) < 3.5
 ORDER BY avg_rating ASC;
+```
 
 ### Size-Color Inventory Matrix (Clothing Category)
 ```sql
@@ -78,6 +79,7 @@ FROM dbo.customer
 WHERE category = 'Clothing'
 GROUP BY color, size
 ORDER BY total_purchased DESC;
+```
 
 ## Interactive Dashboard Features
 * **Vendor Quality Risk Panel:** Table visualization with conditional formatting highlighting items rated below 3.5 stars.
